@@ -22,10 +22,11 @@ assistant.setProperty('rate', 150)     # setting up new voice rate
 
 # Execute
 while True:
+    # Give 30 minutes delay
+    time.sleep(30*60)
+
+    # After 30 minutes execute
     assistant.say("Aditya..Break time !")
     notification.notify(title='Break Notification', message='Hello Aditya...Take a break for 30secs !',
                         app_icon='meditate.ico', timeout=10, ticker='', toast=False)
     assistant.runAndWait()
-
-    # Give 30 minutes delay
-    time.sleep(30*60)
